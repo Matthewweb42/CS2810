@@ -314,16 +314,6 @@ If load:
       <a name="label" val="Write Address"/>
       <a name="width" val="3"/>
     </comp>
-    <comp lib="1" loc="(140,350)" name="Pin">
-      <a name="label" val="Read Address 1"/>
-      <a name="labelloc" val="north"/>
-      <a name="width" val="3"/>
-    </comp>
-    <comp lib="1" loc="(140,390)" name="Pin">
-      <a name="label" val="Read Address 2"/>
-      <a name="labelloc" val="north"/>
-      <a name="width" val="3"/>
-    </comp>
     <comp lib="1" loc="(150,510)" name="Pin">
       <a name="label" val="Write Data"/>
       <a name="width" val="16"/>
@@ -331,6 +321,16 @@ If load:
     <comp lib="1" loc="(180,570)" name="Pin">
       <a name="label" val="load"/>
       <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="1" loc="(630,860)" name="Pin">
+      <a name="label" val="Read Address 1"/>
+      <a name="labelloc" val="north"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="1" loc="(630,910)" name="Pin">
+      <a name="label" val="Read Address 2"/>
+      <a name="labelloc" val="north"/>
+      <a name="width" val="3"/>
     </comp>
     <comp lib="1" loc="(680,580)" name="Pin">
       <a name="facing" val="west"/>
@@ -363,7 +363,7 @@ If load:
       <a name="select" val="3"/>
       <a name="width" val="16"/>
     </comp>
-    <comp lib="3" loc="(660,480)" name="Multiplexer">
+    <comp lib="3" loc="(670,690)" name="Multiplexer">
       <a name="enable" val="false"/>
       <a name="select" val="3"/>
       <a name="width" val="16"/>
@@ -516,13 +516,28 @@ If load:
     <wire from="(570,710)" to="(570,930)"/>
     <wire from="(570,710)" to="(580,710)"/>
     <wire from="(580,390)" to="(580,650)"/>
+    <wire from="(580,650)" to="(630,650)"/>
+    <wire from="(580,660)" to="(630,660)"/>
+    <wire from="(580,670)" to="(630,670)"/>
+    <wire from="(580,680)" to="(630,680)"/>
+    <wire from="(580,690)" to="(590,690)"/>
+    <wire from="(580,700)" to="(630,700)"/>
+    <wire from="(580,710)" to="(630,710)"/>
     <wire from="(580,720)" to="(580,1020)"/>
-    <wire from="(600,730)" to="(600,740)"/>
-    <wire from="(620,690)" to="(670,690)"/>
-    <wire from="(670,580)" to="(670,690)"/>
-    <wire from="(670,580)" to="(680,580)"/>
-    <wire from="(670,690)" to="(670,760)"/>
-    <wire from="(670,760)" to="(680,760)"/>
+    <wire from="(580,720)" to="(630,720)"/>
+    <wire from="(590,690)" to="(590,740)"/>
+    <wire from="(590,740)" to="(640,740)"/>
+    <wire from="(600,730)" to="(600,770)"/>
+    <wire from="(600,770)" to="(630,770)"/>
+    <wire from="(620,580)" to="(620,690)"/>
+    <wire from="(620,580)" to="(680,580)"/>
+    <wire from="(630,690)" to="(640,690)"/>
+    <wire from="(630,770)" to="(630,860)"/>
+    <wire from="(630,910)" to="(650,910)"/>
+    <wire from="(640,690)" to="(640,740)"/>
+    <wire from="(650,730)" to="(650,910)"/>
+    <wire from="(670,690)" to="(680,690)"/>
+    <wire from="(680,690)" to="(680,760)"/>
     <wire from="(80,920)" to="(350,920)"/>
   </circuit>
   <circuit name="RAM64">
@@ -556,6 +571,7 @@ addressing scheme.</a>
       <a name="type" val="output"/>
       <a name="width" val="16"/>
     </comp>
+    <comp loc="(440,310)" name="RAM8"/>
   </circuit>
   <circuit name="PC">
     <comp lib="0" loc="(116,27)" name="Text">
